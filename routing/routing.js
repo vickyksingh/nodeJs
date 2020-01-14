@@ -14,8 +14,10 @@ router.post('/register', (req, res, next)=>{
             res.send("team has been registered")
         }
     }).catch((err)=>{
-        console.log(err.stack)
-        res.send(err.message)
+        // console.log(err.stack)
+        // res.send(err.message)
+        next(err)
+
     })
 })
 
